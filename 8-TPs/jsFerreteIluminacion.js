@@ -8,7 +8,48 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
-{
- 	
+function CalcularPrecio() {
+    var lampara = parseInt(document.getElementById("Cantidad").value);
+    var descuento;
+    var precioFinal;
+    
+    
+    if (lampara > 6) {
+        precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+        descuento = 0.5;
+        document.getElementById("precioDescuento").value = precioFinal;
+    } 
+    
+    else if(lampara == 5) {
+        if ( document.getElementById("Marca").value = "ArgentinaLuz"){
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.4;
+            document.getElementById("precioDescuento").value = precioFinal;    
+        }else {
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.3;
+            document.getElementById("precioDescuento").value = precioFinal;
+        }
+
+    }else if(lampara == 4) {
+        if( document.getElementById("Marca").value = "ArgentinaLuz" && document.getElementById("Marca").value = "FelipeLamparas" ){
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.25;
+            document.getElementById("precioDescuento").value = precioFinal;
+        }else{
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.2;
+            document.getElementById("precioDescuento").value = precioFinal;
+        }
+
+    }else if(lampara == 3) {
+        if( document.getElementById("Marca").value = "ArgentinaLuz"){
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.15;
+            document.getElementById("precioDescuento").value = precioFinal;
+        }else if(document.getElementById("marca").value = "FelipeLamparas){
+            precioFinal = (lampara * 35) - (lampara * 35) * descuento;
+            descuento = 0.2;
+            document.getElementById("precioDescuento").value = precioFinal;
+        }
 }
