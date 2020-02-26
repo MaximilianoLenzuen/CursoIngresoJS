@@ -1,24 +1,16 @@
 function mostrar() {
 
-	var contador = 0;
-	var acumulador = 0;
-	var seguir;
-	var numero;
-	var promedio;
-	do {
-		numero = parseInt(prompt("Ingrese un numero: "));
-		while (isNaN(numero)) {
-			numero = parseInt(prompt("Eso no es un numero, ingrese uno"));
-		}
+var numero;
+var acumulador =0;
+var respuesta = "si";
+var promedio=0;
+while ( respuesta == "si"){
+    numero = parseInt(prompt("Ingrese un numero: "));
+    respuesta = prompt("Quiere seguir ingresando valores. si/no");
+    acumulador = acumulador + numero ;
+    promedio++;
+}
 
-		acumulador = acumulador + numero;
-		contador = contador + 1;
-		seguir = prompt("quiere ingresar otro numero?");
-	} while (seguir == 's');
-
-	promedio = acumulador / contador;
-
-	document.getElementById('suma').value = acumulador;
-	document.getElementById('promedio').value = acumulador / contador;
-
+document.getElementById("suma").value = acumulador ;
+document.getElementById("promedio").value = acumulador / promedio ;
 }//FIN DE LA FUNCIÓN

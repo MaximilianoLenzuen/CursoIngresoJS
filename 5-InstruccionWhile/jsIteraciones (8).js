@@ -1,23 +1,22 @@
 function mostrar()
 {
+    var numero;
+    var respuesta = "si";
+    var positivos=0;
+    var negativos=0;
+    while ( respuesta == "si"){
+        numero = parseInt(prompt("Ingrese un numero: "));
+        respuesta = prompt("Quiere seguir ingresando valores. si/no");
+        if( numero >= 0){
+            positivos = positivos + numero;
+        }else{
+            
+            negativos = negativos * numero;
 
-	var contador=0;
-	var positivo=0;
-	var negativo=1;
-	var respuesta='si';
-
-	do {
-		numero = parseInt(prompt("Ingrese un numero: "));
-		while (isNaN(numero)) {
-			numero = parseInt(prompt("Eso no es un numero, ingrese uno"));
-		}
-
-		acumulador = acumulador + numero;
-		contador = contador + 1;
-		seguir = prompt("quiere ingresar otro numero?");
-	} while (seguir == 's');
-
-document.getElementById('suma').value=positivo;
-document.getElementById('producto').value=negativo;
+        }
+    }
+    
+    document.getElementById("suma").value = positivos ;
+    document.getElementById("producto").value = negativos;
 
 }//FIN DE LA FUNCIÓN
