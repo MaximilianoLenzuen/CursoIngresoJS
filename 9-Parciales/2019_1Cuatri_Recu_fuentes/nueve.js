@@ -1,6 +1,53 @@
 function mostrar()
-{
+{  
+
     var nombre;
+    var edad;
+    var sexo;
+    var notaDelFinal;
+    var resultado = "si";
+ 
+    while(resultado=="si"){
+         nombre = prompt("Ingrese nombre del estudiante: ");
+         while(!(isNaN(nombre))){
+             nombre = prompt("Ingrese un nombre valido!!!");
+        }
+        
+        edad = parseInt(prompt("Ingrese la edad: "));
+        while(edad < 0 && (!isNaN(edad))){
+            edad = parseInt(prompt("Ingrese una edad correcta: "));
+        }
+
+        sexo = prompt("Ingrese el sexo del estudiante: ");
+        while(sexo!='m' && sexo != 'f'){
+            sexo=prompt("Ingrese un sexo valido! f/m");
+        }
+
+        notaDelFinal = parseInt(prompt("Ingresa la nota del final"));
+        while( notaDelFinal < 0 && notaDelFinal > 10){
+            notaDelFinal = parseInt(prompt("Ingrese una nota correcta entre 0 y 10"));
+        }
+
+
+        resultado =prompt()
+    }
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+ var nombre;
     var edad;
     var sexo;
     var notaDelFinal;
@@ -79,4 +126,4 @@ function mostrar()
 
 
     }
-}
+}*/ 
